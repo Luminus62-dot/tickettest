@@ -1,3 +1,4 @@
+const { getAllEvents } = require('../models/eventModel');
  codex/generate-react-and-node.js-project-with-postgresql-cycz79
 const { getAllEvents } = require('../models/eventModel');
 const {
@@ -17,6 +18,8 @@ async function listEvents(req, res) {
     res.status(500).json({ message: 'No se pudieron cargar los eventos' });
   }
 }
+
+module.exports = { listEvents };
 codex/generate-react-and-node.js-project-with-postgresql-cycz79
 module.exports = { listEvents };
 async function createEvent(req, res) {
