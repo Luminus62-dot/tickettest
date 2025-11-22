@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const pool = require('./db');
+const dotenv = require('dotenv');
+
+const { authenticate } = require('./src/middlewares/authMiddleware');
 
 const eventsRouter = require('./src/routes/events');
 const ticketsRouter = require('./src/routes/tickets');
@@ -8,11 +11,13 @@ const usersRouter = require('./src/routes/users');
 
 const app = express();
 
+dotenv.config();
+
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/events', eventsRouter);
-app.use('/api/tickets', ticketsRouter);
+app.use('/api/events', authenticate, eventsRouter);
+app.use('/api/tickets', authenticate, ticketsRouter);
 app.use('/api/users', usersRouter);
 
 app.get('/health', (req, res) => {
