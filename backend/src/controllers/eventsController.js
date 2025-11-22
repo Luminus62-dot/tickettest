@@ -1,6 +1,5 @@
  codex/generate-react-and-node.js-project-with-postgresql-cycz79
 const { getAllEvents } = require('../models/eventModel');
-=======
 const {
   getAllEvents,
   createEvent: createEventModel,
@@ -20,7 +19,6 @@ async function listEvents(req, res) {
 }
 codex/generate-react-and-node.js-project-with-postgresql-cycz79
 module.exports = { listEvents };
-=======
 async function createEvent(req, res) {
   const ownerId = req.user?.id;
 

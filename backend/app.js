@@ -20,7 +20,6 @@ app.use(express.json());
 
 app.use('/api/events', eventsRouter);
 app.use('/api/tickets', ticketsRouter);
-=======
 dotenv.config();
 
 app.use(cors());
