@@ -1,9 +1,13 @@
+ codex/generate-react-and-node.js-project-with-postgresql-cycz79
+const { getAllEvents } = require('../models/eventModel');
+=======
 const {
   getAllEvents,
   createEvent: createEventModel,
   updateEvent: updateEventModel,
   deleteEvent: deleteEventModel
 } = require('../models/eventModel');
+> main
 
 async function listEvents(req, res) {
   try {
@@ -14,7 +18,9 @@ async function listEvents(req, res) {
     res.status(500).json({ message: 'No se pudieron cargar los eventos' });
   }
 }
-
+codex/generate-react-and-node.js-project-with-postgresql-cycz79
+module.exports = { listEvents };
+=======
 async function createEvent(req, res) {
   const ownerId = req.user?.id;
 
@@ -86,3 +92,4 @@ async function deleteEvent(req, res) {
 }
 
 module.exports = { listEvents, createEvent, updateEvent, deleteEvent };
+main
