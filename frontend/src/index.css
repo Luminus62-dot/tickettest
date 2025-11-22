@@ -52,3 +52,73 @@ body {
 .error {
   color: #b91c1c;
 }
+
+.success {
+  color: #15803d;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.stacked-form {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.stacked-form input,
+.stacked-form button,
+.form-actions button {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.stacked-form button,
+.form-actions button,
+.item-actions button {
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.stacked-form button:disabled,
+.form-actions button:disabled,
+.item-actions button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.list-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.item-actions .danger {
+  background-color: #b91c1c;
+}
